@@ -1,0 +1,602 @@
+[
+ {
+  "ProductID": "1",
+  "ProductName": "Smartphone",
+  "Category": "Electronics",
+  "Price": "91.31"
+ },
+ {
+  "ProductID": "2",
+  "ProductName": "Laptop",
+  "Category": "Electronics",
+  "Price": "468.75"
+ },
+ {
+  "ProductID": "3",
+  "ProductName": "Tablet",
+  "Category": "Electronics",
+  "Price": "158.87"
+ },
+ {
+  "ProductID": "4",
+  "ProductName": "Headphones",
+  "Category": "Electronics",
+  "Price": "35.74"
+ },
+ {
+  "ProductID": "5",
+  "ProductName": "Smartwatch",
+  "Category": "Electronics",
+  "Price": "340.73"
+ },
+ {
+  "ProductID": "6",
+  "ProductName": "Camera",
+  "Category": "Electronics",
+  "Price": "149.17"
+ },
+ {
+  "ProductID": "7",
+  "ProductName": "TV",
+  "Category": "Electronics",
+  "Price": "322.37"
+ },
+ {
+  "ProductID": "8",
+  "ProductName": "Bluetooth Speaker",
+  "Category": "Electronics",
+  "Price": "13.11"
+ },
+ {
+  "ProductID": "9",
+  "ProductName": "Desktop Computer",
+  "Category": "Electronics",
+  "Price": "401.78"
+ },
+ {
+  "ProductID": "10",
+  "ProductName": "Monitor",
+  "Category": "Electronics",
+  "Price": "172.28"
+ },
+ {
+  "ProductID": "11",
+  "ProductName": "Refrigerator",
+  "Category": "Home & Kitchen",
+  "Price": "196.5"
+ },
+ {
+  "ProductID": "12",
+  "ProductName": "Microwave",
+  "Category": "Home & Kitchen",
+  "Price": "50.89"
+ },
+ {
+  "ProductID": "13",
+  "ProductName": "Toaster",
+  "Category": "Home & Kitchen",
+  "Price": "411.06"
+ },
+ {
+  "ProductID": "14",
+  "ProductName": "Coffee Maker",
+  "Category": "Home & Kitchen",
+  "Price": "145.95"
+ },
+ {
+  "ProductID": "15",
+  "ProductName": "Vacuum Cleaner",
+  "Category": "Home & Kitchen",
+  "Price": "314.26"
+ },
+ {
+  "ProductID": "16",
+  "ProductName": "Blender",
+  "Category": "Home & Kitchen",
+  "Price": "172.21"
+ },
+ {
+  "ProductID": "17",
+  "ProductName": "Rice Cooker",
+  "Category": "Home & Kitchen",
+  "Price": "129.59"
+ },
+ {
+  "ProductID": "18",
+  "ProductName": "Air Fryer",
+  "Category": "Home & Kitchen",
+  "Price": "465.38"
+ },
+ {
+  "ProductID": "19",
+  "ProductName": "Oven",
+  "Category": "Home & Kitchen",
+  "Price": "73.95"
+ },
+ {
+  "ProductID": "20",
+  "ProductName": "Mixer",
+  "Category": "Home & Kitchen",
+  "Price": "370.36"
+ },
+ {
+  "ProductID": "21",
+  "ProductName": "Mystery Novel",
+  "Category": "Books",
+  "Price": "126.06"
+ },
+ {
+  "ProductID": "22",
+  "ProductName": "Science Fiction",
+  "Category": "Books",
+  "Price": "252.18"
+ },
+ {
+  "ProductID": "23",
+  "ProductName": "History Book",
+  "Category": "Books",
+  "Price": "491.14"
+ },
+ {
+  "ProductID": "24",
+  "ProductName": "Fantasy Novel",
+  "Category": "Books",
+  "Price": "21.93"
+ },
+ {
+  "ProductID": "25",
+  "ProductName": "Biography",
+  "Category": "Books",
+  "Price": "434.65"
+ },
+ {
+  "ProductID": "26",
+  "ProductName": "Self-help Book",
+  "Category": "Books",
+  "Price": "270.62"
+ },
+ {
+  "ProductID": "27",
+  "ProductName": "Cook Book",
+  "Category": "Books",
+  "Price": "166.22"
+ },
+ {
+  "ProductID": "28",
+  "ProductName": "Children�s Book",
+  "Category": "Books",
+  "Price": "171.21"
+ },
+ {
+  "ProductID": "29",
+  "ProductName": "Art Book",
+  "Category": "Books",
+  "Price": "467.88"
+ },
+ {
+  "ProductID": "30",
+  "ProductName": "Travel Guide",
+  "Category": "Books",
+  "Price": "466.85"
+ },
+ {
+  "ProductID": "31",
+  "ProductName": "T-Shirt",
+  "Category": "Clothing",
+  "Price": "437.47"
+ },
+ {
+  "ProductID": "32",
+  "ProductName": "Jeans",
+  "Category": "Clothing",
+  "Price": "286.23"
+ },
+ {
+  "ProductID": "33",
+  "ProductName": "Jacket",
+  "Category": "Clothing",
+  "Price": "37.71"
+ },
+ {
+  "ProductID": "34",
+  "ProductName": "Dress",
+  "Category": "Clothing",
+  "Price": "170.79"
+ },
+ {
+  "ProductID": "35",
+  "ProductName": "Sneakers",
+  "Category": "Clothing",
+  "Price": "204.97"
+ },
+ {
+  "ProductID": "36",
+  "ProductName": "Sandals",
+  "Category": "Clothing",
+  "Price": "410.14"
+ },
+ {
+  "ProductID": "37",
+  "ProductName": "Hat",
+  "Category": "Clothing",
+  "Price": "31.69"
+ },
+ {
+  "ProductID": "38",
+  "ProductName": "Scarf",
+  "Category": "Clothing",
+  "Price": "415.4"
+ },
+ {
+  "ProductID": "39",
+  "ProductName": "Gloves",
+  "Category": "Clothing",
+  "Price": "464.68"
+ },
+ {
+  "ProductID": "40",
+  "ProductName": "Socks",
+  "Category": "Clothing",
+  "Price": "134.75"
+ },
+ {
+  "ProductID": "41",
+  "ProductName": "Tennis Racket",
+  "Category": "Sports & Outdoors",
+  "Price": "76.49"
+ },
+ {
+  "ProductID": "42",
+  "ProductName": "Basketball",
+  "Category": "Sports & Outdoors",
+  "Price": "52.89"
+ },
+ {
+  "ProductID": "43",
+  "ProductName": "Soccer Ball",
+  "Category": "Sports & Outdoors",
+  "Price": "425.16"
+ },
+ {
+  "ProductID": "44",
+  "ProductName": "Yoga Mat",
+  "Category": "Sports & Outdoors",
+  "Price": "485.92"
+ },
+ {
+  "ProductID": "45",
+  "ProductName": "Dumbbells",
+  "Category": "Sports & Outdoors",
+  "Price": "171.52"
+ },
+ {
+  "ProductID": "46",
+  "ProductName": "Resistance Bands",
+  "Category": "Sports & Outdoors",
+  "Price": "428.97"
+ },
+ {
+  "ProductID": "47",
+  "ProductName": "Treadmill",
+  "Category": "Sports & Outdoors",
+  "Price": "315.56"
+ },
+ {
+  "ProductID": "48",
+  "ProductName": "Exercise Bike",
+  "Category": "Sports & Outdoors",
+  "Price": "151.18"
+ },
+ {
+  "ProductID": "49",
+  "ProductName": "Swimming Goggles",
+  "Category": "Sports & Outdoors",
+  "Price": "420.32"
+ },
+ {
+  "ProductID": "50",
+  "ProductName": "Hiking Backpack",
+  "Category": "Sports & Outdoors",
+  "Price": "453.35"
+ },
+ {
+  "ProductID": "51",
+  "ProductName": "Gaming Console",
+  "Category": "Electronics",
+  "Price": "152.59"
+ },
+ {
+  "ProductID": "52",
+  "ProductName": "Mouse",
+  "Category": "Electronics",
+  "Price": "72.46"
+ },
+ {
+  "ProductID": "53",
+  "ProductName": "Keyboard",
+  "Category": "Electronics",
+  "Price": "36.12"
+ },
+ {
+  "ProductID": "54",
+  "ProductName": "Printer",
+  "Category": "Electronics",
+  "Price": "35.11"
+ },
+ {
+  "ProductID": "55",
+  "ProductName": "Router",
+  "Category": "Electronics",
+  "Price": "73.15"
+ },
+ {
+  "ProductID": "56",
+  "ProductName": "Web Camera",
+  "Category": "Electronics",
+  "Price": "319.54"
+ },
+ {
+  "ProductID": "57",
+  "ProductName": "External Hard Drive",
+  "Category": "Electronics",
+  "Price": "130.37"
+ },
+ {
+  "ProductID": "58",
+  "ProductName": "USB Flash Drive",
+  "Category": "Electronics",
+  "Price": "196.25"
+ },
+ {
+  "ProductID": "59",
+  "ProductName": "Memory Card",
+  "Category": "Electronics",
+  "Price": "435.66"
+ },
+ {
+  "ProductID": "60",
+  "ProductName": "Power Bank",
+  "Category": "Electronics",
+  "Price": "340.62"
+ },
+ {
+  "ProductID": "61",
+  "ProductName": "Electric Kettle",
+  "Category": "Home & Kitchen",
+  "Price": "394.92"
+ },
+ {
+  "ProductID": "62",
+  "ProductName": "Pressure Cooker",
+  "Category": "Home & Kitchen",
+  "Price": "72.1"
+ },
+ {
+  "ProductID": "63",
+  "ProductName": "Cutting Board",
+  "Category": "Home & Kitchen",
+  "Price": "119.9"
+ },
+ {
+  "ProductID": "64",
+  "ProductName": "Knife Set",
+  "Category": "Home & Kitchen",
+  "Price": "124.08"
+ },
+ {
+  "ProductID": "65",
+  "ProductName": "Food Processor",
+  "Category": "Home & Kitchen",
+  "Price": "157.68"
+ },
+ {
+  "ProductID": "66",
+  "ProductName": "Salad Spinner",
+  "Category": "Home & Kitchen",
+  "Price": "336.89"
+ },
+ {
+  "ProductID": "67",
+  "ProductName": "Ice Cream Maker",
+  "Category": "Home & Kitchen",
+  "Price": "172.65"
+ },
+ {
+  "ProductID": "68",
+  "ProductName": "Food Dehydrator",
+  "Category": "Home & Kitchen",
+  "Price": "93.92"
+ },
+ {
+  "ProductID": "69",
+  "ProductName": "Water Filter",
+  "Category": "Home & Kitchen",
+  "Price": "381.76"
+ },
+ {
+  "ProductID": "70",
+  "ProductName": "Egg Cooker",
+  "Category": "Home & Kitchen",
+  "Price": "436.68"
+ },
+ {
+  "ProductID": "71",
+  "ProductName": "Comic Book",
+  "Category": "Books",
+  "Price": "12.73"
+ },
+ {
+  "ProductID": "72",
+  "ProductName": "Graphic Novel",
+  "Category": "Books",
+  "Price": "298.41"
+ },
+ {
+  "ProductID": "73",
+  "ProductName": "Poetry Book",
+  "Category": "Books",
+  "Price": "349.83"
+ },
+ {
+  "ProductID": "74",
+  "ProductName": "Math Book",
+  "Category": "Books",
+  "Price": "328.28"
+ },
+ {
+  "ProductID": "75",
+  "ProductName": "Psychology Book",
+  "Category": "Books",
+  "Price": "211.49"
+ },
+ {
+  "ProductID": "76",
+  "ProductName": "Adventure Novel",
+  "Category": "Books",
+  "Price": "62.16"
+ },
+ {
+  "ProductID": "77",
+  "ProductName": "Philosophy Book",
+  "Category": "Books",
+  "Price": "151.42"
+ },
+ {
+  "ProductID": "78",
+  "ProductName": "Gardening Book",
+  "Category": "Books",
+  "Price": "200.48"
+ },
+ {
+  "ProductID": "79",
+  "ProductName": "Physics Book",
+  "Category": "Books",
+  "Price": "174.39"
+ },
+ {
+  "ProductID": "80",
+  "ProductName": "Chemistry Book",
+  "Category": "Books",
+  "Price": "374.44"
+ },
+ {
+  "ProductID": "81",
+  "ProductName": "Skirt",
+  "Category": "Clothing",
+  "Price": "93.14"
+ },
+ {
+  "ProductID": "82",
+  "ProductName": "Sweater",
+  "Category": "Clothing",
+  "Price": "422.78"
+ },
+ {
+  "ProductID": "83",
+  "ProductName": "Shorts",
+  "Category": "Clothing",
+  "Price": "360.38"
+ },
+ {
+  "ProductID": "84",
+  "ProductName": "Swimwear",
+  "Category": "Clothing",
+  "Price": "19.37"
+ },
+ {
+  "ProductID": "85",
+  "ProductName": "Pajamas",
+  "Category": "Clothing",
+  "Price": "240.18"
+ },
+ {
+  "ProductID": "86",
+  "ProductName": "Dress Shirt",
+  "Category": "Clothing",
+  "Price": "45.13"
+ },
+ {
+  "ProductID": "87",
+  "ProductName": "Belt",
+  "Category": "Clothing",
+  "Price": "191.78"
+ },
+ {
+  "ProductID": "88",
+  "ProductName": "Sunglasses",
+  "Category": "Clothing",
+  "Price": "418.39"
+ },
+ {
+  "ProductID": "89",
+  "ProductName": "Tie",
+  "Category": "Clothing",
+  "Price": "262.37"
+ },
+ {
+  "ProductID": "90",
+  "ProductName": "Raincoat",
+  "Category": "Clothing",
+  "Price": "220.6"
+ },
+ {
+  "ProductID": "91",
+  "ProductName": "Skiing Helmet",
+  "Category": "Sports & Outdoors",
+  "Price": "333.33"
+ },
+ {
+  "ProductID": "92",
+  "ProductName": "Golf Clubs",
+  "Category": "Sports & Outdoors",
+  "Price": "98.13"
+ },
+ {
+  "ProductID": "93",
+  "ProductName": "Fishing Rod",
+  "Category": "Sports & Outdoors",
+  "Price": "104.04"
+ },
+ {
+  "ProductID": "94",
+  "ProductName": "Camping Tent",
+  "Category": "Sports & Outdoors",
+  "Price": "431.29"
+ },
+ {
+  "ProductID": "95",
+  "ProductName": "Sleeping Bag",
+  "Category": "Sports & Outdoors",
+  "Price": "274.4"
+ },
+ {
+  "ProductID": "96",
+  "ProductName": "Water Bottle",
+  "Category": "Sports & Outdoors",
+  "Price": "203.14"
+ },
+ {
+  "ProductID": "97",
+  "ProductName": "Climbing Shoes",
+  "Category": "Sports & Outdoors",
+  "Price": "432.76"
+ },
+ {
+  "ProductID": "98",
+  "ProductName": "Surfboard",
+  "Category": "Sports & Outdoors",
+  "Price": "481.43"
+ },
+ {
+  "ProductID": "99",
+  "ProductName": "Snowboard",
+  "Category": "Sports & Outdoors",
+  "Price": "64.24"
+ },
+ {
+  "ProductID": "100",
+  "ProductName": "Kayak",
+  "Category": "Sports & Outdoors",
+  "Price": "270.01"
+ }
+]
