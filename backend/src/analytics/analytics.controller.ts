@@ -1,17 +1,21 @@
 // genearte controller for analytics
 
 import { Controller, Get } from '@nestjs/common';
+import {AnalyticsService}  from './analytics.service'
 
 @Controller('analytics')
 export class AnalyticsController {
+    constructor(private  AnalyticsService: AnalyticsService){}
     @Get('total_sales')
-    getSales() {
-    
+    getSales() { 
+        const ret = this.AnalyticsService.getProducts()
+        return ret;
     }
 
     @Get('trending_products')
     getTrending() {
-        return 'Trending products';
+        const ret =  this.AnalyticsService.getTrending()
+        return ret
     }
 
     @Get('category_sales')

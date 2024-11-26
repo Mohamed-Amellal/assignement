@@ -6,12 +6,14 @@ import { ProductsController } from './products/products.controller';
 import { ProductsModule } from './products/products.module';
 import { ProductSchema } from 'src/schema/products.schema';
 import { Sales, SalesSchema } from 'src/schema/sales.schema';
+import { SalesModule } from './sales/sales.module';
+import { AnalyticsModule } from './analytics/analytics.module';
 @Module({
   imports: [
     // Set up the MongoDB connection string here
     MongooseModule.forRoot('mongodb://exampleUser:examplePassword@localhost:27017/ecosite?authSource=admin'),
-    MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }]),
-    ProductsModule
+    MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, {name : 'Sales', schema: SalesSchema}]),
+    ProductsModule, SalesModule, AnalyticsModule
   ],
   controllers: [AppController],
   providers: [AppService],

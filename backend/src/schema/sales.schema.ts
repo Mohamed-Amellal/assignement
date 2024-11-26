@@ -5,9 +5,9 @@ import * as mongoose from 'mongoose';
 export class Sales {
 
     @Prop({required: true})
-    SalesID: number;
+    SaleID: number;
 
-    @Prop({required: true, type: mongoose.Schema.Types.ObjectId, ref: 'Product'})
+    @Prop({required: true})
     ProductID: number;
 
     @Prop({required: true})

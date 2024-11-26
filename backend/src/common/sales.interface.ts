@@ -2,7 +2,7 @@ import { Document } from "mongoose";
 
 
 export interface Sales extends Document {
-    SalesID: number;
+    SaleID: number;
     ProductID: number;
     Date: string;
     Quantity: number;
