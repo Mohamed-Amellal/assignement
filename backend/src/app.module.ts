@@ -10,7 +10,6 @@ import { SalesModule } from './sales/sales.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 @Module({
   imports: [
-    // Set up the MongoDB connection string here
     MongooseModule.forRoot('mongodb://exampleUser:examplePassword@localhost:27017/ecosite?authSource=admin'),
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, {name : 'Sales', schema: SalesSchema}]),
     ProductsModule, SalesModule, AnalyticsModule
@@ -19,20 +18,5 @@ import { AnalyticsModule } from './analytics/analytics.module';
   providers: [AppService],
 })
 export class AppModule {}
-
-// @Module({
-//   imports: [
-//     MongooseModule.forRoot('mongodb://localhost:27017/ecosite'),
-//     MongooseModule.forFeature([
-//       { name: 'Product', schema: ProductSchema },
-//       { name: 'sales', schema: SalesSchema },
-//     ]),
-//     ProductsModule,
-//   ],
-//   controllers: [AppController],
-//   providers: [AppService],
-// })
-// export class AppModule {}
-
 
 

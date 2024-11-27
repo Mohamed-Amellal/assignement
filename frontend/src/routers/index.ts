@@ -1,16 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import DashboardView from '../views/DashboardView.vue';
-import TotalSalesView from '../views/TotalSalesView.vue';
-import TopSellingProductsView from '../views/TopSellingProductsView.vue';
-import SalesByCategoryView from '../views/SalesByCategoryView.vue';
-import ProductTableView from '../views/ProductTableView.vue';
+import Dashboard from '@/views/Dashboard.vue';
+import SalesByCategory from '@/components/SalesByCategory.vue';
+// import SalesByProduct from '@/components/SalesByProduct.vue';
+import ProductTable from '@/components/ProductTable.vue';
+import TotalSales from '@/components/TotalSales.vue';
+import TimeFilter from '@/components/TimeFilter.vue';
+import TopSellingProducts from '@/components/TopSellingProducts.vue';
+import SalesByProductChart from '@/components/SalesByProductChart.vue';
 
 const routes = [
-  { path: '/dashboard', component: DashboardView },
-  { path: '/total-sales', component: TotalSalesView },
-  { path: '/top-selling-products', component: TopSellingProductsView },
-  { path: '/sales-by-category', component: SalesByCategoryView },
-  { path: '/product-table', component: ProductTableView },
+  // { path: '/', component: Dashboard },
+  { path: '/sales-by-category', component: SalesByCategory },
+  { path: '/sales-by-product', component: SalesByProductChart },
+  { path: '/product-table', component: ProductTable },
+  { path: '/total-sales', component: TotalSales },
+  { path: '/time-filter', component: TimeFilter },
+  { path: '/top-selling-products', component: TopSellingProducts },
 ];
 
 const router = createRouter({

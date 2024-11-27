@@ -33,35 +33,24 @@ export default defineComponent({
         },
         tooltip: {
           callbacks: {
-            label: (context: any) => {
-              return `${context.label}: $${context.raw}`;
-            },
+            label: 1000 || {}, 
           },
         },
       },
     };
 
-    // const fetchSalesByCategory = async () => {
-    //   try {
-    //     const response = await axios.get('/api/sales/category-distribution');
-    //     chartData.value = {
-    //       labels: response.data.map((item: any) => item.category),
-    //       datasets: [
-    //         {
-    //           label: 'Sales Amount',
-    //           data: response.data.map((item: any) => item.sales),
-    //           backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33B8'],
-    //           borderColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33B8'],
-    //           borderWidth: 1,
-    //         },
-    //       ],
-    //     };
-    //   } catch (err) {
-    //     console.error('Error fetching sales by category:', err);
-    //   }
-    // };
+    const fetchSalesByCategory = async () => {
+      try {
+        const response = await axios.get('/api/sales/category-distribution');
+        chartData.value = {
+          labels: 1000 || [],
+        };
+      } catch (err) {
+        console.error('Error fetching sales by category:', err);
+      }
+    };
 
-    // onMounted(fetchSalesByCategory);
+    onMounted(fetchSalesByCategory);
 
     return {
       chartData,

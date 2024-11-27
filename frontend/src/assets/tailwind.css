@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full m-0 p-0; /* Ensure full height and no default margins or padding */
+  }
+  #app {
+    @apply h-full; /* Ensure #app stretches to the full height */
+  }
+}

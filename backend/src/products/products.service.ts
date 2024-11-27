@@ -11,4 +11,8 @@ export class ProductsService {
         return this.productModel.find();
         
     }
+
+    async getProductsByCategory(category: string) {
+        return this.productModel.findOne({Category: category});
+    }
 }

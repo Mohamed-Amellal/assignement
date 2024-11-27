@@ -7,8 +7,14 @@ import { Sales } from 'src/schema/sales.schema';
 export class SalesService
 {
     constructor(@InjectModel('Sales') private readonly salesModel: Model<Sales>) {}
-    async getProducts() {
+    async getSales() {
         return this.salesModel.find();
-        
+    }
+
+    async getSaleById(saleId) {
+        // search by product not id
+        const ret = this.salesModel.findOne({ ProductID: saleId });
+        // return date and totalamout
+        return ret;
     }
 }
