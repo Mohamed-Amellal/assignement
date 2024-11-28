@@ -24,5 +24,7 @@ git clone https://github.com/Mohamed-Amellal/assignement
 cd <project-folder>
 ```
 ### .RUN the following command
-```docker-compose up```
+```bash
+docker-compose up
+```
 
