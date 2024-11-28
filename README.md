@@ -20,7 +20,7 @@ Follow these steps to get the project up and running:
 ### 1. Clone the Repository
 
 ```bash
-git clone [<your-repository-url>](https://github.com/Mohamed-Amellal/assignement)
+git clone https://github.com/Mohamed-Amellal/assignement
 cd <project-folder>
 ```
 ### .RUN the following command
