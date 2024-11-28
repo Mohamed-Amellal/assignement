@@ -23,7 +23,7 @@ Follow these steps to get the project up and running:
 git clone https://github.com/Mohamed-Amellal/assignement
 cd <project-folder>
 ```
-### .RUN the following command
+### 2.RUN the following command
 ```bash
 docker-compose up
 ```
