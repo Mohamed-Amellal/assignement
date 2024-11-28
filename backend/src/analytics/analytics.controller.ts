@@ -1,89 +1,110 @@
-import { Controller, Get, Req, Res } from '@nestjs/common'; // Import NestJS decorators
-import { Request, Response } from 'express'; // Import Request and Response types from Express for custom handling
-import { AnalyticsService } from './analytics.service'; // Import the service responsible for business logic
+import { Controller, Get, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
+import { AnalyticsService, category_sales, trend_sales } from './analytics.service';
 
-/**
- * @Controller('analytics')
- * Handles all analytics-related endpoints for sales and trending data.
- */
 @Controller('analytics')
 export class AnalyticsController {
-  
-  /**
-   * Constructor to inject the AnalyticsService.
-   * @param analyticsService - The service responsible for handling business logic related to analytics.
-   */
   constructor(private readonly analyticsService: AnalyticsService) {}
 
   /**
-   * GET /analytics/total_sales
    * Endpoint to fetch the total sales from the database or service.
    * @param req - The HTTP request object.
    * @param res - The HTTP response object.
    * @returns JSON response containing total sales number.
+   * 
+   * Example response:
+   * {
+   *   1500
+   * }
    */
-  @Get('total_sales')
+  @Get('total_sales/:formatdate')
   async getSales(@Req() req: Request, @Res() res: Response): Promise<void> {
     try {
-      // Fetch the total sales from the AnalyticsService
-      const totalSales = await this.analyticsService.getProducts();
-      // Return the total sales in JSON format with a 200 status
+      const totalSales: number = await this.analyticsService.getProducts(req.params.formatdate);
       res.status(200).json({ totalSales });
-    } catch (error) {
-      // If an error occurs, return a 500 status with error details
+    } catch (error: any) {
       res.status(500).json({ message: 'Err 500 Internal server error', error });
     }
   }
 
   /**
-   * GET /analytics/trending_products
    * Endpoint to fetch the list of trending products.
    * @param req - The HTTP request object.
    * @param res - The HTTP response object.
    * @returns JSON response containing the list of trending products.
+   * 
+   * Example response:
+   * {
+   *   "trendingProducts": [
+   *     { "name": "Product X", "Quantity": 100, "TotalAmount": 1000 },
+   *     { "name": "Product Y", "Quantity": 80, "TotalAmount": 800 },
+   *     { "name": "Product Z", "Quantity": 60, "TotalAmount": 600 }
+   *   ]
+   * }
    */
   @Get('trending_products')
   async getTrending(@Req() req: Request, @Res() res: Response): Promise<void> {
     try {
-      // Fetch the trending products from the AnalyticsService
-      const trendingProducts = await this.analyticsService.getTrending();
-      // Return the trending products in JSON format with a 200 status
+      const trendingProducts: trend_sales[] = await this.analyticsService.getTrending();
       res.status(200).json({ trendingProducts });
-    } catch (error) {
-      // If an error occurs, return a 500 status with error details
-      res.status(500).json({ message: 'Err 500 Internal server error', error });
-    }
-  }
-
-  @Get('trending_products/all')
-  async getallproduct(@Req() req: Request, @Res() res: Response): Promise<void> {
-    try {
-      // Fetch the trending products from the AnalyticsService
-      const trendingProducts = await this.analyticsService.getTrendingProduct();
-      // Return the trending products in JSON format with a 200 status
-      res.status(200).json({ trendingProducts });
-    } catch (error) {
-      // If an error occurs, return a 500 status with error details
+    } catch (error: any) {
       res.status(500).json({ message: 'Err 500 Internal server error', error });
     }
   }
 
   /**
-   * GET /analytics/category_sales
+   * Endpoint to fetch all trending products.
+   * @param req - The HTTP request object.
+   * @param res - The HTTP response object.
+   * @returns JSON response containing the list of all trending products.
+   */
+  @Get('trending_products/all')
+  async getallproduct(@Req() req: Request, @Res() res: Response): Promise<void> {
+    try {
+      const trendingProducts: trend_sales[] = await this.analyticsService.getTrendingProduct();
+      res.status(200).json({ trendingProducts });
+    } catch (error: any) {
+      res.status(500).json({ message: 'Err 500 Internal server error', error });
+    }
+  }
+
+  /**
    * Endpoint to fetch the sales data by category.
    * @param req - The HTTP request object.
    * @param res - The HTTP response object.
    * @returns JSON response containing sales categorized by product category.
+   * 
+   * Example response:
+   * {
+   *   "categorySales": [
+   *     { "category": "Category X", "total": 500, "percentage": 50 },
+   *     { "category": "Category Y", "total": 300, "percentage": 30 },
+   *     { "category": "Category Z", "total": 200, "percentage": 20 }
+   *   ]
+   * }
    */
   @Get('category_sales')
   async getCategorySales(@Req() req: Request, @Res() res: Response): Promise<void> {
     try {
-      // Fetch the category sales data from the AnalyticsService
-      const categorySales = await this.analyticsService.getCategorySales();
-      // Return the category sales data in JSON format with a 200 status
+      const categorySales: category_sales[] = await this.analyticsService.getCategorySales();
       res.status(200).json({ categorySales });
-    } catch (error) {
-      // If an error occurs, return a 500 status with error details
+    } catch (error: any) {
+      res.status(500).json({ message: 'Err 500 Internal server error', error });
+    }
+  }
+
+  /**
+   * Endpoint to fetch sales data within a specific period.
+   * @param req - The HTTP request object.
+   * @param res - The HTTP response object.
+   * @returns JSON response containing sales data within the specified period.
+   */
+  @Get('datefilter/:formatdate')
+  async getSalesByDate(@Req() req: Request, @Res() res: Response): Promise<void> {
+    try {
+      const trendingProducts: trend_sales[] = await this.analyticsService.getSalesInPeriod(req.params.formatdate);
+      res.status(200).json({ trendingProducts });
+    } catch (error: any) {
       res.status(500).json({ message: 'Err 500 Internal server error', error });
     }
   }

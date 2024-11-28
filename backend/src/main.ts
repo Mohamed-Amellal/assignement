@@ -14,7 +14,12 @@ async function bootstrap() {
 
   //enabble cors
 
-  app.enableCors();
+ // Enable CORS
+ app.enableCors({
+  origin: ['http://vue_app:8080'], // Frontend origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
+  credentials: true, // Allow cookies (if needed)
+});
   SwaggerModule.setup('api', app, documentFactory);
   await app.listen(process.env.PORT ?? 3000);
 }

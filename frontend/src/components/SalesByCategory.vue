@@ -23,16 +23,12 @@ export default defineComponent({
     }
   },
   setup() {
-    const products = ref<any[]>([]); // Use ref to store products as a reactive array
+    const products = ref<any[]>([]); 
 
     onMounted(async () => {
       try {
-        const response = await axios.get('http://localhost:3000/analytics/category_sales'); // Fetch data from backend
-        products.value = response.data.categorySales; // Set products with the response data
-        console.log('Products:', products.value);
-        console.log('Labels:', response.data);
-
-        // Aggregate sales data by category
+        const response = await axios.get('http://nestjs_app:3000/analytics/category_sales');
+        products.value = response.data.categorySales;
         const salesByCategory = products.value.reduce((acc, product) => {
           if (!acc[product.category]) {
             acc[product.category] = 0;
@@ -41,14 +37,12 @@ export default defineComponent({
           return acc;
         }, {});
 
-        // Prepare data for Chart.js
         const labels = Object.keys(salesByCategory);
         const data = Object.values(salesByCategory);
 
-        // Create Chart.js chart
         const ctx = document.getElementById('myChart') as HTMLCanvasElement;
         new Chart(ctx, {
-          type: 'bar', // Change to 'pie' or other chart types as needed
+          type: 'bar', 
           data: {
             labels: labels,
             datasets: [{
@@ -99,10 +93,27 @@ export default defineComponent({
 <style scoped>
 .sales-by-category {
   margin-bottom: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .sales-by-category canvas {
   width: 100% !important;
   height: auto !important;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 </style>

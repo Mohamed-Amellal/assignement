@@ -10,7 +10,7 @@ import { SalesModule } from './sales/sales.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://exampleUser:examplePassword@localhost:27017/ecosite?authSource=admin'),
+    MongooseModule.forRoot('mongodb://exampleUser:examplePassword@mongodb:27017/ecosite?authSource=admin'),
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, {name : 'Sales', schema: SalesSchema}]),
     ProductsModule, SalesModule, AnalyticsModule
   ],

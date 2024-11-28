@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { Products } from 'src/schema/products.schema';
 import { Sales } from 'src/schema/sales.schema';
 
 @Injectable()
@@ -12,9 +13,11 @@ export class SalesService
     }
 
     async getSaleById(saleId) {
-        // search by product not id
-        const ret = this.salesModel.findOne({ ProductID: saleId });
-        // return date and totalamout
+        const ret = this.salesModel
+        .find({ ProductID: saleId })
+        .sort({ Date: 1 }) 
+        .limit(1);
         return ret;
     }
-}
+    }
+    

@@ -10,12 +10,9 @@ import SalesByProductChart from '@/components/SalesByProductChart.vue';
 
 const routes = [
   // { path: '/', component: Dashboard },
+  { path: '/', component: ProductTable },
   { path: '/sales-by-category', component: SalesByCategory },
   { path: '/sales-by-product', component: SalesByProductChart },
-  { path: '/product-table', component: ProductTable },
-  { path: '/total-sales', component: TotalSales },
-  { path: '/time-filter', component: TimeFilter },
-  { path: '/top-selling-products', component: TopSellingProducts },
 ];
 
 const router = createRouter({
