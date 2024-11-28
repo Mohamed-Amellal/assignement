@@ -27,7 +27,7 @@ export default defineComponent({
 
     onMounted(async () => {
       try {
-        const response = await axios.get('http://nestjs_app:3000/analytics/category_sales');
+        const response = await axios.get('http://localhost:3000/analytics/category_sales');
         products.value = response.data.categorySales;
         const salesByCategory = products.value.reduce((acc, product) => {
           if (!acc[product.category]) {

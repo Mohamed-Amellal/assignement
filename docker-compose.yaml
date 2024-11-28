@@ -10,6 +10,8 @@ services:
       MONGO_INITDB_DATABASE: ecosite
     ports:
       - "27017:27017"
+    networks:
+      - mongodb_network
 
   nestjs_app:
     build: ./backend/.
@@ -19,9 +21,10 @@ services:
     networks:
       - mongodb_network
     environment:
-      DATABASE_URL: mongodb://mongodb:27017/ecosite
+      DATABASE_URL: mongodb://exampleUser:examplePassword@mongodb:27017/ecosite?authSource=admin
     ports:
       - "3000:3000"
+
   vue_app:
     build: ./frontend/.
     container_name: vue_app

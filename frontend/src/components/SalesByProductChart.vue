@@ -102,31 +102,31 @@ export default defineComponent({
         switch (dateRange.value) {
         case '7':
             pastDate = now;
-            pastDate.setDate(now.getDate() - 7); // Subtract 7 days
-            formattedPastDate = formatDate(pastDate); // Format the date
-          apiUrl = 'http://nestjs_app:3000/analytics/datefilter/'+formattedPastDate;
+            pastDate.setDate(now.getDate() - 7); 
+            formattedPastDate = formatDate(pastDate); 
+          apiUrl = 'http://localhost:3000/analytics/datefilter/'+formattedPastDate;
           break;
         case '30':
             pastDate = now;
-            pastDate.setMonth(now.getMonth() - 1); // Subtract 1 month
-            formattedPastDate = formatDate(pastDate); // Format the date
-          apiUrl = 'http://nestjs_app:3000/analytics/datefilter/'+formattedPastDate;
+            pastDate.setMonth(now.getMonth() - 1); 
+            formattedPastDate = formatDate(pastDate);
+          apiUrl = 'http://localhost:3000/analytics/datefilter/'+formattedPastDate;
           break;
         case '365':
             pastDate = new Date(now);
-            pastDate.setFullYear(now.getFullYear() - 1); // Subtract 1 year
-            formattedPastDate = formatDate(pastDate); // Format the date
-          apiUrl = 'http://nestjs_app:3000/analytics/datefilter/'+formattedPastDate;
+            pastDate.setFullYear(now.getFullYear() - 1); 
+            formattedPastDate = formatDate(pastDate); 
+          apiUrl = 'http://localhost:3000/analytics/datefilter/'+formattedPastDate;
           break;
         case 'all':
         default:
-          apiUrl = 'http://nestjs_app:3000/analytics/trending_products/all';
+          apiUrl = 'http://localhost:3000/analytics/trending_products/all';
           break;
       }
       console.log('API URL:', apiUrl);
-        const response = await axios.get(apiUrl); // Fetch data from backend');
+        const response = await axios.get(apiUrl); 
         console.log('Products:', response.data.trendingProducts);
-        const products = response.data.trendingProducts; // Set products with the response data
+        const products = response.data.trendingProducts; 
 
         // Prepare data for Chart.js
         const labels = products?.map((product: any) => product.name);

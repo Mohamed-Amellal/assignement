@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -10,8 +11,19 @@ import { SalesModule } from './sales/sales.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://exampleUser:examplePassword@mongodb:27017/ecosite?authSource=admin'),
-    MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, {name : 'Sales', schema: SalesSchema}]),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '../.env',
+    }),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (configService: ConfigService) => ({
+        uri: "mongodb://exampleUser:examplePassword@mongodb:27017/ecosite?authSource=admin",
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }),
+      inject: [ConfigService],
+    }),    MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, {name : 'Sales', schema: SalesSchema}]),
     ProductsModule, SalesModule, AnalyticsModule
   ],
   controllers: [AppController],

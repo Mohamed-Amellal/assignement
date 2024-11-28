@@ -16,7 +16,11 @@ async function bootstrap() {
 
  // Enable CORS
  app.enableCors({
-  origin: ['http://vue_app:8080'], // Frontend origin
+  origin: [
+    'http://localhost:8080',  // Vue development server
+    'http://vue_app:3000',   // Docker frontend service
+    'http://localhost:3000',  // Alternate frontend port  // Production frontend URL
+  ], // Frontend origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
   credentials: true, // Allow cookies (if needed)
 });

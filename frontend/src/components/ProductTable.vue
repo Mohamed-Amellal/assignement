@@ -44,14 +44,14 @@ export default defineComponent({
 
     onMounted(async () => {
       try {
-        const res = await axios.get('http://nestjs_app:3000/analytics/trending_products/all');
+        const res = await axios.get('http://localhost:3000/analytics/trending_products/all');
         const trendingProducts = res.data.trendingProducts;
         console.log('Trending Products:', trendingProducts);
         products.value = trendingProducts;
         displayedProducts.value = trendingProducts; 
-        const response = await axios.get('http://nestjs_app:3000/products');
+        const response = await axios.get('http://localhost:3000/products');
         for (let i = 0; i < products.value.length; i++) {
-          const resp = await axios.get('http://nestjs_app:3000/sales/' + response.data.products[i].ProductID);
+          const resp = await axios.get('http://localhost:3000/sales/' + response.data.products[i].ProductID);
           products.value[i].Date = resp.data.sale[0].Date;
 
           products.value[i].quantity = res.data.trendingProducts[i].Quantity;
